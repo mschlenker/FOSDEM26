@@ -131,3 +131,22 @@ We prepared some scripts to interact with the soil moisture sensors we gave away
 
 The script `justsensor/main.py` just loops over the capacative soil moisture sensor and prints the values each two seconds.
 For totally dry, it should print out around 4000, for submerging in water around 1200.
+
+### A minimal Checkmk agent
+
+This provides a minimal Checkmk agent output, looking like this:
+
+```
+<<<check_mk_agent>>>
+AgentOS: MicroPython
+<<<soilmoisture>>>
+1596
+<<<local>>>
+0 "Soil moisture ESP32" smval=1596 Everything is fine
+```
+
+There are three sections.
+First, the Checkmk agent, it just has to be there and hint on the operating system.
+Second, a section for a [plug-in](https://docs.checkmk.com/latest/en/devel_check_plugins.html) subscribing to this.
+Third, a [local check](https://docs.checkmk.com/latest/en/localchecks.html), with the state calculated locally on the sensor board.
+
