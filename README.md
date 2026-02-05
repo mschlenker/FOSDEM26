@@ -134,7 +134,7 @@ For totally dry, it should print out around 4000, for submerging in water around
 
 ### A minimal Checkmk agent
 
-This provides a minimal Checkmk agent output, looking like this:
+This provides a minimal Checkmk agent output on port 6556, looking like this:
 
 ```
 <<<check_mk_agent>>>
@@ -149,4 +149,11 @@ There are three sections.
 First, the Checkmk agent, it just has to be there and hint on the operating system.
 Second, a section for a [plug-in](https://docs.checkmk.com/latest/en/devel_check_plugins.html) subscribing to this.
 Third, a [local check](https://docs.checkmk.com/latest/en/localchecks.html), with the state calculated locally on the sensor board.
+
+### Prometheus scraping endpoint
+
+This usen [Prometheus express](https://github.com/ssube/prometheus_express) stolen from ssube and verbatim copied.
+Please check out their repository in case of updates.
+The example code reads the on-die temperature sensor of the ESP32.
+
 
