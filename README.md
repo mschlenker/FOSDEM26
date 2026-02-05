@@ -9,7 +9,7 @@ If you need more ports and more processing power, look out for Lolin/Wemos S2 Mi
 
 Skip if you have received a board from us at FOSDEM or another event.
 
-[The download page of MicroPython](https://micropython.org/download/) links to all download images and install instructions.
+The [download page of MicroPython](https://micropython.org/download/) links to all download images and install instructions.
 In case your S2/S3 came with a UF2 boot loader, you might use the UF2 images, copy them to the emulated USB flash drive, and call it a day.
 
 For everything else, you need `esptool` or `esptool.py`, either from your distributions repository or installed with the command `pip3 install esptool`.
@@ -129,4 +129,5 @@ We prepared some scripts to interact with the soil moisture sensors we gave away
 
 ### Just testing
 
-
+The script `justsensor/main.py` just loops over the capacative soil moisture sensor and prints the values each two seconds.
+For totally dry, it should print out around 4000, for submerging in water around 1200.
