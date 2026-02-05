@@ -152,8 +152,16 @@ Third, a [local check](https://docs.checkmk.com/latest/en/localchecks.html), wit
 
 ### Prometheus scraping endpoint
 
-This usen [Prometheus express](https://github.com/ssube/prometheus_express) stolen from ssube and verbatim copied.
+This uses [Prometheus express](https://github.com/ssube/prometheus_express) stolen from ssube and verbatim copied.
 Please check out their repository in case of updates.
 The example code reads the on-die temperature sensor of the ESP32.
 
+### Syslog UDP sender
+
+Another example, that shamelessly steals from other people's work.
+It uses [Usyslog from kfricke](https://github.com/kfricke/micropython-usyslog).
+This example expects a "door open sensor", aka microswitch, connected to 39 (I did this example on S2), so change ports.
+Values are sent to some UDP syslog receiver.
+
+The most smart part about this is how easily the microcontroller can be told to sleep for a few minutes, before waking up, sleeping and so on...
 
