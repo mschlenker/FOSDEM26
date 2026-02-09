@@ -165,3 +165,12 @@ Values are sent to some UDP syslog receiver.
 
 The most smart part about this is how easily the microcontroller can be told to sleep for a few minutes, before waking up, sleeping and so on...
 
+## 3D printed enclosure
+
+The enclosure consists of four parts: two inner T shaped parts that hold sensor and ESP32-C3 together and then slide into the lower part of the outer casing.
+This is then closed with a smaller upper cover.
+I printed the T shaped parts with brim.
+For the outer casing, no brim is necessary.
+Because of the tight tolerances, you might need to sand the T shaped parts until everything fits.
+
+
