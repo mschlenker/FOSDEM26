@@ -173,4 +173,5 @@ I printed the T shaped parts with brim.
 For the outer casing, no brim is necessary.
 Because of the tight tolerances, you might need to sand the T shaped parts until everything fits.
 
+To bolt the casing together, use 2.5x20 to 3x30 wood screws, like [Heco Topix](https://www.heco-schrauben.com/HECO-TOPIX-plus-3.5-x-30-countersunk-head-HD-20-TG-A3K-1000-pieces/60261) or similar.
 
