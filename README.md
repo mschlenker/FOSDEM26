@@ -5,6 +5,12 @@ For FOSDEM 2026 (and OSMC 2025 and Chemnitzer Linux-Tage), we have prepared some
 These have a single-core RISC-V core and are the cheapest available boards at this time, since no royalties for the processing core have to be paid.
 If you need more ports and more processing power, look out for Lolin/Wemos S2 Mini or ESP32-S3 boards.
 
+Parts used at FOSDEM and CLT:
+
+- [ESP-32 C3 Supermini (AliExpress)](https://www.aliexpress.com/item/1005007539612437.html)
+- [ESP-32 Capacitative soil moisture sensor (AliExpress)](https://www.aliexpress.com/item/1005008744986367.html)
+
+
 ## Download MicroPython
 
 Skip if you have received a board from us at FOSDEM or another event.
@@ -14,7 +20,7 @@ In case your S2/S3 came with a UF2 boot loader, you might use the UF2 images, co
 
 For everything else, you need `esptool` or `esptool.py`, either from your distributions repository or installed with the command `pip3 install esptool`.
 
-To install the Micropython firmware on the C3 boards we used at FOSDEM and CLT use these two commands:
+To install the [Micropython firmware on the C3 boards](https://micropython.org/download/ESP32_GENERIC_C3/) we used at FOSDEM and CLT use these two commands:
 
 ```
 esptool.py --port /dev/ttyACM0 erase_flash
