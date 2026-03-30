@@ -20,7 +20,7 @@ In case your S2/S3 came with a UF2 boot loader, you might use the UF2 images, co
 
 For everything else, you need `esptool` or `esptool.py`, either from your distributions repository or installed with the command `pip3 install esptool`.
 
-To install the [Micropython firmware on the C3 boards](https://micropython.org/download/ESP32_GENERIC_C3/) we used at FOSDEM and CLT use these two commands:
+To install the [Micropython firmware on the C3 boards](https://micropython.org/download/ESP32_GENERIC_C3/) that we used at FOSDEM and CLT, use these two commands:
 
 ```
 esptool.py --port /dev/ttyACM0 erase_flash
