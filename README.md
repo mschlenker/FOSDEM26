@@ -1,7 +1,7 @@
 # MicroPython on ESP32 – fun with sensors
 
 MicroPython on ESP32 is a very convenient way of working with Microcontroller boards.
-For FOSDEM 2026 (and OSMC 2025), we have prepared some examples working with ESP32-C3 Supermini boards.
+For FOSDEM 2026 (and OSMC 2025 and Chemnitzer Linux-Tage), we have prepared some examples working with ESP32-C3 Supermini boards.
 These have a single-core RISC-V core and are the cheapest available boards at this time, since no royalties for the processing core have to be paid.
 If you need more ports and more processing power, look out for Lolin/Wemos S2 Mini or ESP32-S3 boards.
 
@@ -13,6 +13,22 @@ The [download page of MicroPython](https://micropython.org/download/) links to a
 In case your S2/S3 came with a UF2 boot loader, you might use the UF2 images, copy them to the emulated USB flash drive, and call it a day.
 
 For everything else, you need `esptool` or `esptool.py`, either from your distributions repository or installed with the command `pip3 install esptool`.
+
+To install the Micropython firmware on the C3 boards we used at FOSDEM and CLT use these two commands:
+
+```
+esptool.py --port /dev/ttyACM0 erase_flash
+esptool.py --baud 460800 --port /dev/ttyACM0 write_flash 0 ESP32_GENERIC_C3-builddate-version.bin
+```
+
+In case the (unprivileged) user you are logged in as is not allowed to open the port, add it to the group that can access serial devices.
+Usually this is `dialout`:
+
+```
+sudo usermod -a -G dialout username
+```
+
+Log out and log in again to make the new group membership active.
 
 ## Access the board
 
